@@ -1,0 +1,50 @@
+/* main-colors */
+$text-color: #38404b;
+$grey: #9aa6bb;
+
+$blue: #1761aa;
+$bgblue: #114980;
+$lblue: #2b6dae;
+
+$white: #ffffff;
+$bodycolor: #f9fafc;
+
+$green: #27ae60;
+
+$lred: #ff7285;
+
+$badgeRed: #ff4d4d;
+$badgeYellow: #f1d731;
+$badgeGreen: #59e270;
+
+// subcolors
+
+/* Fonts */
+$pLight: "ProximaNova-Light", sans-serif;
+$pRegular: "ProximaNova-Regular", sans-serif;
+$pSemiBold: "ProximaNova-SemiBold", sans-serif;
+
+$lightgreen: rgba(39, 174, 96, 0.2);
+$lightred: rgba(255, 114, 133, 0.2);
+$lightblue: rgba(61, 106, 183, 0.2);
+$shadowcolor: rgba(161, 161, 161, 0.14);
+$orange: #cf9255;
+$lightgrey: #d3dbe8;
+$hovergrey: #f5f7fb;
+
+$paddingCards: 30px 40px;
+
+:export {
+    blue: $blue;
+    red: $lred;
+    green: $green;
+    grey: $grey;
+}
+
+$tabActiveUnderlineColor: rgba(39, 83, 149, 0.8); 
+$blueTextLabelColor: #5275aa;
+$tabUnderlineColor: #DBDBDB;
+
+$tabActiveTextColor: #275395;
+
+$addBtnTextColor: #3d6ab7;

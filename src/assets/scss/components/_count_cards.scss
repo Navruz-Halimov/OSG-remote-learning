@@ -1,0 +1,38 @@
+
+.card.count-card {
+    border-radius: 18px;
+    height: 100%;
+
+    .card-content {
+        padding: 25px 32px;
+    }
+
+    .media {
+        align-items: center;
+        margin-bottom: 9px !important;
+    
+        .media-left.count-icon {
+            display: flex;
+            
+            svg {
+                width: 28px;
+                height: 27px;
+            }   
+        }
+
+        .media-content .title {
+            font-size: 22px;
+            color: #3d6ab7;
+        }
+
+        .media-content .title.text-green {
+            color: $green;
+        }
+    }
+
+    .custom-content {
+        font-size: 16px;
+        color: $text-color;
+    }
+
+}

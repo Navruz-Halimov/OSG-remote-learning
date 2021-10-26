@@ -1,0 +1,50 @@
+
+.breadcrumb {
+    &.custom-breadcrumb {
+        ul {
+            margin-left: 0;
+
+            a {
+                padding: 0 20px;
+
+                &:hover {
+                    color: $lblue;
+                }
+            }
+
+            li {
+                &:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    a {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            li+li {
+                margin-top: 0;
+
+                &::before {
+                    content: "";
+                    background-image: url(/assets/angle-right.2841307a.svg);
+                    background-repeat: no-repeat;
+                    width: 8px;
+                    height: 10px;
+                    background-size: 9px 10px;
+                }   
+            }
+        
+            .is-active {
+                pointer-events: none;
+
+                a {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

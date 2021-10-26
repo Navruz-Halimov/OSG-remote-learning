@@ -1,0 +1,27 @@
+h4 {
+  font-size: 18px;
+  // font-family: $pLight;
+  font-weight: normal;
+
+  &.title {
+    color: $tabActiveUnderlineColor;
+    margin-bottom: 0;
+    padding-top: 4px;
+  }
+}
+
+h4.text,
+.text {
+  &-gray {
+    color: $grey
+  }
+
+  &-primary {
+    color: $blueTextLabelColor;
+  }
+
+  &-black {
+    color: #000
+  }
+}
+

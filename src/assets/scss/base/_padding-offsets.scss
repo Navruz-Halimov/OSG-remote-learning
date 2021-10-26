@@ -1,0 +1,22 @@
+.padding {
+  &-sm {
+    padding: 12px;
+
+    &-x {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    &-y {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &-list {
+    padding: 15px 20px;
+    &-sm {
+      padding: 5px 20px;
+    }
+  }
+}

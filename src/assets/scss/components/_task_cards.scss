@@ -1,0 +1,113 @@
+.custom-btn-danger {
+   background-color: $lightred;
+}
+.custom-btn-info {
+   background-color: $bgblue;
+}
+.custom-btn-success {
+   background-color: $lightgreen;
+}
+.custom-btn-grey {
+   background-color: $lightblue !important;
+}
+
+.column.custm-column {
+   display: flex;
+}
+
+.card {
+   box-shadow: 0 3px 10px $shadowcolor;
+}
+
+.card.task-card {
+   box-shadow: 0 3px 10px $shadowcolor;
+   border-radius: 4px;
+   width: 100%;
+   &.blocked {
+      .card-header-title {
+         color: $lred !important;
+      }
+
+      .button.custom-button {
+         background-color: $grey;
+      }
+   }
+
+   * {
+      text-align: center;
+      font-family: "Proxima Nova";
+   }
+
+   .card-header.task-card-header {
+      box-shadow: none;
+      border-bottom: 2px #ededed dashed;
+      padding: 0 21px 0 20px;
+      position: relative;
+
+      .card-header-title.task-card-title {
+         font-size: 18px;
+         font-weight: 400;
+         display: block;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+      }
+
+      .info-icon-div {
+         position: absolute;
+         right: 15px;
+         top: 15px;
+         display: flex;
+         align-items: center;
+         background: none;
+         outline: none;
+         border: none;
+         padding: 0;
+         cursor: pointer;
+      }
+   }
+
+   .card-content {
+      height: calc(100% - 53px);
+   }
+
+   .custom-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .term-exam {
+         color: $green;
+         margin-bottom: 10px;
+      }
+
+      .task-type {
+         margin-bottom: 26px;
+
+         .task-dates p {
+            color: $grey;
+         }
+         .task-dates p:first-child {
+            margin-bottom: 10px;
+         }
+      }
+      .button.custom-button {
+         margin-top: auto;
+         padding: 6px 29px;
+      }
+      .task-score {
+         padding: 4px 15px;
+         margin-top: auto;
+         border-radius: 20px;
+      }
+   }
+
+   .btn-more {
+      path {
+         fill: $text-color;
+         stroke: $text-color;
+      }
+   }
+}

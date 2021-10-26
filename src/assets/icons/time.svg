@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Прямоугольник_3426" data-name="Прямоугольник 3426" width="24" height="24" fill="none" stroke="#3d6ab7" stroke-width="0.4"/>
+    </clipPath>
+  </defs>
+  <g id="Векторный_смарт-объект" data-name="Векторный смарт-объект" transform="translate(255.85 255.85)">
+    <g id="Векторный_смарт-объект-2" data-name="Векторный смарт-объект" transform="translate(-255.85 -255.85)" clip-path="url(#clip-path)">
+      <path id="Контур_4446" data-name="Контур 4446" d="M12.037,24.073A12.037,12.037,0,1,1,24.073,12.037,12.048,12.048,0,0,1,12.037,24.073m0-22.569A10.532,10.532,0,1,0,22.569,12.037,10.545,10.545,0,0,0,12.037,1.5" transform="translate(-0.026 -0.026)" fill="#3d6ab7" stroke="#3d6ab7" stroke-width="0.4"/>
+      <path id="Контур_4447" data-name="Контур 4447" d="M245.018,114.1a.747.747,0,0,1-.531-.221l-4.266-4.266a.752.752,0,0,1-.221-.531v-7.024a.752.752,0,1,1,1.5,0v6.709l4.045,4.045a.752.752,0,0,1-.531,1.288" transform="translate(-228.742 -96.563)" fill="#3d6ab7" stroke="#3d6ab7" stroke-width="0.4"/>
+    </g>
+  </g>
+</svg>

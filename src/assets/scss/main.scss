@@ -1,0 +1,332 @@
+// Bulma extetions
+// Import only what you need from Bulma
+@import "../../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../../node_modules/bulma/sass/base/_all.sass";
+@import "../../../node_modules/bulma/sass/elements/button.sass";
+@import "../../../node_modules/bulma/sass/elements/container.sass";
+@import "../../../node_modules/bulma/sass/elements/title.sass";
+@import "../../../node_modules/bulma/sass/form/_all.sass";
+@import "../../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../../node_modules/bulma/sass/layout/section.sass";
+@import "bulma";
+@import "~bulma-switch";
+@import "~bulma-checkradio";
+@import "vue-select/src/scss/vue-select.scss";
+
+// Utils
+
+// Base
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography";
+@import "base/padding-offsets";
+
+* {
+  font-family: "Proxima Nova";
+}
+
+// Components
+@import "components/header";
+@import "components/sidebar";
+
+//Otabek components
+@import "components/accordion";
+@import "components/tables/table";
+@import "components/statistics";
+
+//Jamshid components
+@import "components/task_cards";
+@import "components/subject_block";
+@import "components/count_cards";
+@import "components/notify_block";
+@import "components/avatar";
+@import "components/week_tabs";
+@import "components/breadcrumbs";
+@import "components/tabs";
+@import "components/galery_block";
+
+/* Ziko's components */
+@import "components/pagination";
+
+@import "components/keyframes";
+@import "components/sections";
+
+$primary: $blue;
+
+* {
+  font-family: "Proxima Nova";
+  outline: none;
+}
+.wrapper {
+  position: relative;
+  background-color: $bodycolor;
+}
+.content {
+  padding-left: var(--sidebar-width);
+  // min-height: calc(100vh - var(--header-height));
+  margin-top: var(--header-height);
+
+  &-main {
+    width: 100%;
+    min-height: calc(100vh - var(--header-height));
+    padding: 40px 50px;
+
+    @include flex-row;
+  }
+}
+
+html {
+  overflow: auto;
+
+  body {
+    overflow: auto;
+    min-height: 100vh;
+  }
+
+  color: $text-color;
+}
+
+.icon-btn {
+  cursor: pointer;
+}
+
+.icon-more-btn {
+  width: 15px;
+  fill: #9aa6bb;
+  // margin-left: 2px;
+}
+
+.add-btn {
+  background-color: $tabActiveUnderlineColor;
+  width: auto;
+  // height: 30px;
+  float: right;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0 none;
+  outline: none;
+  fill: #fff;
+  // margin-right: 5px;
+  svg {
+    width: 11px;
+    fill: white;
+    margin-right: 5px;
+  }
+  span {
+    color: #fff;
+    font-size: 14px;
+  }
+  @media (max-width: 1540px) {
+    width: 30px;
+    padding: 0 0;
+    span {
+      display: none;
+    }
+    svg {
+      margin: 0;
+    }
+  }
+}
+
+// .sm-icon {
+// }
+
+.icon-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.icon-rotate-90 {
+  transform: rotate(90deg);
+}
+
+a {
+  color: $text-color;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  font-size: 0.9em !important;
+}
+
+.flex-1,
+.fl-1 {
+  flex: 1;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.flex {
+  &-row {
+    @include flex-row;
+  }
+  &-column {
+    @include flex-col;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.justify-content {
+  &-start {
+    justify-content: flex-start !important;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+}
+
+.align-items {
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-center {
+    align-items: center;
+  }
+
+  &-stretch {
+    align-items: stretch;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+}
+
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+
+  &-auto {
+    overflow: auto;
+  }
+}
+
+button.primary-btn,
+.primary-btn {
+  background-color: $tabActiveUnderlineColor;
+  color: #fff;
+  fill: #fff;
+  outline: none;
+  box-shadow: none;
+  border-radius: 999px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  height: 2.4em;
+  font-size: 15px;
+  border: none;
+  transition: transform 0.2s;
+  min-width: 89px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    box-shadow: none !important;
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
+
+  .left-arrow {
+    width: 10px;
+    margin-right: 6px;
+    margin-bottom: 0;
+  }
+
+  .right-arrow {
+    width: 6px;
+    margin-left: 8px;
+    margin-bottom: 3px;
+  }
+
+  .right-down {
+    width: 10px;
+    margin-top: 3px;
+    margin-left: 6px;
+  }
+
+  &-color {
+    padding-left: 2px;
+    margin-left: -6px;
+    padding-right: 8px;
+    background-color: $addBtnTextColor;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    padding-top: 2px;
+  }
+}
+
+.m {
+  &-auto {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+
+  &x-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &y-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &l-auto {
+    margin-left: auto;
+  }
+
+  &r-auto {
+    margin-right: auto;
+  }
+}
+
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  height: 2.4em;
+}
+
+.no-rotate {
+  transform: unset !important;
+
+  // .custom-dropdown.svg,
+  &svg {
+    transform: unset !important;
+  }
+}

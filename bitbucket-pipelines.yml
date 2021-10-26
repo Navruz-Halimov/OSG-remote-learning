@@ -1,0 +1,31 @@
+image: node:10.15.3
+
+pipelines:
+   branches:
+     master:
+       - step:
+           caches:
+             - node
+           name: Install
+           script:
+             - echo "installing modules..."
+             - npm install
+           artifacts:
+             - node_modules/**
+
+       - step:
+           name: Deploy to staging
+           deployment: staging
+           script:
+             - echo "Building and deploying to staging environment..."
+             - NODE_ENV=stage npm run build
+             - scp -r dist/* $SSH_USER@$SSH_HOST:/home/dist-learning/cadr-frontend/staging
+
+       - step:
+           name: Deploy to production
+           deployment: production
+           trigger: manual
+           script:
+             - echo "Building for production environment..."
+             - NODE_ENV=production npm run build
+             - scp -r dist/* $SSH_USER@$SSH_HOST:/home/dist-learning/cadr-frontend/production

@@ -1,0 +1,21 @@
+.avatar-block {
+    display: inline-block;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+    object-fit: contain;
+    object-position: center;
+
+    &.bordered {
+        border: 2px solid $grey;
+    }
+
+    &.rectangled {
+        border-radius: 0;
+        border-radius: 7px;
+    }
+
+    &.cover {
+        object-fit: cover;
+    }
+}

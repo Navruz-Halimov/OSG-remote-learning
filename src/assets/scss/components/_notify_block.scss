@@ -1,0 +1,78 @@
+.notify-card {
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+        text-align: center;
+        /* display: flex; */
+        background: $blue;
+        padding: 15px;
+
+        &__title {
+            /* padding: 10px; */
+            /* background: blue; */
+            color: $white;
+            margin-bottom: 0 !important;
+            font-size: 18px;
+        }
+        &__item {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            height: 58px;
+            width: 28px;
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 18px;
+                fill: white;
+                margin: auto;
+            }
+        }
+    }
+
+    &-content {
+        padding: 20px;
+    }
+
+    &-footer {
+        padding: 20px;
+        justify-self: end;
+
+        &__number {
+            font-size: 14px;
+            color: $grey;
+            margin-bottom: 10px;
+        }
+        
+        &__avatars {
+            display: flex;
+            justify-content: space-between;
+
+            &--item {
+                display: inline-block;
+
+                svg {
+                    width: 18px;
+                    fill: white;
+                    transform: rotate(90deg);
+                    margin: auto;
+                }
+
+                &:first-child {
+                }
+
+                &:last-child {
+                    border-radius: 50%;
+                    width: 41px;
+                    height: 41px;
+                    background-color: $lightgrey;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

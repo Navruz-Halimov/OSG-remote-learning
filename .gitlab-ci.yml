@@ -1,0 +1,52 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+# before_script:
+#   - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y  )
+#   - eval $(ssh-agent -s)
+#   - ssh-add <(echo "$SSH_PRIVATE_KEY")
+#   - mkdir -p ~/.ssh
+#   - chmod 700 ~/.ssh
+#   - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+#   - chmod 644 ~/.ssh/known_hosts
+
+stages:
+  - install
+  - staging
+  - production
+
+install:
+  stage: install
+  only:
+    - master
+  script:
+    - npm install
+
+staging:
+  stage: staging
+  environment:
+    name: test
+    url: https://ekadr.sudya.uz/test
+  only:
+    - master
+  script:
+    - echo "Building..."
+    # - NODE_ENV=stage npm run build
+    # - scp -r dist/* root@$SSH_HOST:/home/dist-learning/cadr-frontend/staging
+
+
+production:
+  stage: production
+  environment:
+    name: production
+    url: https://ekadr.sudya.uz
+  only:
+    - master
+  when: manual
+  script:
+    - echo "Building..."
+    # - NODE_ENV=production npm run build
+    # - scp -r dist/* root@$SSH_HOST:/home/dist-learning/cadr-frontend/production

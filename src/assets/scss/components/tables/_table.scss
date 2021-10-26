@@ -1,0 +1,60 @@
+@import "~@/assets/scss/base/mixins";
+
+.tbill {
+  //border: 2px dashed #c7c7c7;
+  $marknumb-color: #69e4a6;
+  $marknumb-color-orange: #ffca83;
+  $marknumb-color-red: #ff7285;
+  td,
+  th {
+    border: 1.5px dashed #c7c7c7 !important;
+    color: $text-color;
+  }
+
+  &__header {
+    &__th {
+      border-bottom: none;
+      height: 38px;
+    }
+    &__thinner {
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+  &__body {
+    &__td {
+      height: 38px;
+      &:nth-child(n + 2) {
+        text-align: center;
+      }
+      &:first-child {
+        font-size: 17px;
+        font-weight: 400;
+      }
+    }
+    &__tdinner {
+      font-size: 15px;
+      font-weight: 400;
+      text-align: center;
+    }
+    &__marknumb {
+      /* moved to mixin */
+      // font-size: 16px;
+      // font-weight: 400;
+      // border-radius: 14px;
+      // padding: 3px 15px;
+      /* moved to mixin */
+
+      @include marknumb;
+
+      background-color: rgba($marknumb-color, 0.2);
+      &_orange {
+        background-color: rgba($marknumb-color-orange, 0.2);
+      }
+      &_red {
+        background: rgba($marknumb-color-red, 0.2);
+      }
+    }
+  }
+}

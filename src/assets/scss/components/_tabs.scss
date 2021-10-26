@@ -1,0 +1,50 @@
+
+ul.custom-tabs {
+    margin: 0 !important;
+    display: flex;
+    width: max-content;
+    box-shadow: 0 3px 10px rgba(161, 161, 161, 0.14);
+    margin-bottom: 0;
+    text-align: center;
+
+    li {
+        margin: 0 !important;
+        min-width: 160px;
+        list-style: none;
+        padding: 7px 24px;
+        cursor: pointer;
+        border: 1px solid $grey;
+
+        &+li {
+            border-left: none;
+        }
+
+        a {
+            color: $grey;
+            border-color: $grey;
+            font-size: 16px;
+        }
+
+        &.is-active { 
+            background-color: $blue;
+            border-color: $blue;
+            a {
+                color: white;
+            }
+        }
+
+        &:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            a {
+            }
+        }
+
+        &:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            a {
+            }
+        }
+    }
+}
